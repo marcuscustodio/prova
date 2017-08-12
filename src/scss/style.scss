@@ -1,0 +1,87 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/components-font-awesome/scss/font-awesome";
+
+.row{
+	@include make-row;
+}
+.row {
+	margin-right: 0;
+	margin-left: 0;
+
+	>.col,
+	[class*="col-"]{
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+/*Sidebar*/
+@import "sidebar";
+
+/*Header*/
+@import "header";
+
+/*card custom*/
+@import "card-custom";
+
+/*timeline*/
+@import "timeline";
+
+/*badge custom*/
+//@import "badge-custom";
+
+.container{
+	width: 95%;
+	padding-left: 15px;
+	.card{
+		height: 100%;
+	}
+}
+.header .h-nav{
+		.nav{
+			margin-top:25px;
+		}
+		ul{
+			width: 250px;
+			float: right;
+		}
+		li{
+			font-size: 0.6em;
+		}
+	}
+
+@include media-breakpoint-up('md') {
+	.container{
+		width: 50%;
+	}
+}
+@include media-breakpoint-up('sm') {
+
+	.container{
+		width: 100%;
+		.card{
+			height: 400px;
+		}
+		.timeline{
+			padding-top: 0;
+			.timeline-body{
+				font-size: .6em;
+			}
+		}
+		
+	}
+	.coluna-menor{
+		@include make-col-project(6);
+	}
+	.coluna-maior{
+		@include make-col-project(6);
+	}
+}
+
+@include media-breakpoint-up('lg') {
+	.container{
+		width: 85%;
+		margin-left: 180px;
+	}
+}
+

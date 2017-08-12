@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projeto final: Certificacão Bootstrap</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<nav>
+		<div class="sidebar">
+			<div class="sidebar-header">
+				<img src="img/logo.png" alt="">
+			</div><!--sidebar header-->
+
+			<ul class="nav">
+				<li class="nav-item success">
+					<a href="#" class="nav-link ">
+						<i class="fa fa-home"></i>
+						Dashboard
+					</a>
+				</li>
+				
+				<li class="nav-item info">
+					<a href="#" class="nav-link">
+						<span class="badge badge-pill badge-danger align-badge">2</span>
+						<i class="fa fa-envelope-o"></i>
+						Messages
+					</a>
+				</li>
+				<li class="nav-item warning">
+					<a href="#" class="nav-link">
+						<i class="fa fa-line-chart"></i>
+						Analytics
+					</a>
+				</li>
+				<li class="nav-item danger">
+					<a href="#" class="nav-link">
+						<i class="fa fa-cog"></i>
+						Settings
+					</a>
+				</li>
+			</ul>
+		</div><!--sidebar-->
+	</nav>
+
+	<header>
+		<div class="header">
+			<div class="container-menu">
+				<div class="offcanvas">
+					<a href="#" class="js-open-sidebar item">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div><!--offcanvas-->
+
+			</div><!--container-->
+					<div class="h-nav">
+						<ul class="nav">
+							<li class="nav-item no-border">
+						  		<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						 	</li>
+							<li class="nav-item dropdown">
+							    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">John Doe</a>
+							</li>
+							<li class="nav-item">
+							    <a class="nav-link" href="#">Sign Out</a>
+							</li>
+							<li class="nav-item">
+							    <a class="nav-link" href="#">Support</a>
+							</li>
+						</ul>
+					</div><!--h-nav-->
+			</div><!--header-->
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="coluna-menor">
+					<article>
+						<div class="card">
+							<div class="card-header">
+								<header>
+									<div class="title-card-header">
+										<h2 class="card-title">Visitors: </h2>
+									</div>
+									<div class="months">
+										<select class="custom-select form-control">
+										  <option selected>Days</option>
+										 </select>
+									</div>
+								</header>
+								</div><!--card header-->
+
+								<div class="card-block">
+									<img src="img/graph-visitors.png" alt="" class="img-fluid center-block">
+								</div><!--card block-->							
+						</div><!--card-->
+					</article>
+				</div><!--coluna menor-->
+
+				<div class="coluna-maior">
+					<article>
+						<div class="card">
+							<div class="card-header">
+								<header>
+									<div class="title-card-header">
+										<h2 class="card-title">Subscriptions: </h2>
+									</div>
+									<div class="months">
+										<select class="custom-select form-control">
+										  <option selected>Months</option>
+										 </select>
+									</div>
+								</header>
+								</div><!--card header-->
+
+								<div class="card-block">
+									<img src="img/graph-subscriptions.png" alt="" class="img-fluid center-block">
+								</div><!--card block-->							
+						</div><!--card-->
+					</article>
+				</div><!--coluna maior-->
+			</div><!--row-->
+
+			<div class="row">
+				<div class="coluna-menor">
+					<article>
+						<div class="card">
+							<div class="card-header">
+								<header>
+									<div class="title-card-header">
+										<h2 class="card-title">Messages: </h2>
+									</div>
+									<div class="messages">
+										<button type="button" class="btn btn-default disabled">
+										 	<i class="fa fa-angle-up" aria-hidden="true"></i> 
+										</button>
+										<button type="button" class="btn btn-default">
+										    <i class="fa fa-angle-down" aria-hidden="true"></i> 
+										</button>
+									</div>
+								</header>
+								
+							</div>	<!--card header-->	
+							<div class="message-block">
+								    <ul class="timeline">
+								        <li>
+								          <div class="timeline-badge info"></div>
+								          <div class="timeline-panel">
+								            <div class="timeline-heading">
+								              <h4 class="timeline-title">Jane Doe <i class="fa fa-cog"></i></h4>
+								            </div>
+								            <div class="timeline-body">
+								              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								            </div>
+								          </div>
+								        </li>
+
+								        <li>
+								          <div class="timeline-badge"></div>
+									          <div class="timeline-panel">
+										            <div class="timeline-heading">
+										              	<h4 class="timeline-title">John Doe <i class="fa fa-cog"></i></h4>
+										            </div>
+									            <div class="timeline-body">
+									              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									            </div>
+									          </div>
+								        </li>
+
+								        <li>
+								          <div class="timeline-badge"></div>
+								          <div class="timeline-panel">
+								            	<div class="timeline-heading">
+								             		 <h4 class="timeline-title">Alex Doe <i class="fa fa-cog"></i></h4>
+								           		 </div>
+									             <div class="timeline-body">
+									              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									             </div>
+								          </div>
+								        </li>
+
+								     </ul>
+								</div> <!--message-block-->						
+						</div><!--card-->
+					</article>
+				</div><!--coluna menor-->
+
+				<div class="coluna-maior">
+					<article>
+						<div class="card">
+							<div class="card-header">
+								<header>
+									<h2 class="card-title">Overview:</h2>
+								</header>
+								</div><!--card header-->
+
+								<div class="card-block">
+									<img src="img/grpah-overview.png" alt="" class="img-fluid center-block">
+								</div><!--card block-->							
+						</div><!--card-->
+					</article>
+				</div><!--coluna maior-->
+			</div><!--row-->
+		</div><!--container-->
+	</main>
+
+<script src="js/main.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

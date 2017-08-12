@@ -1,0 +1,95 @@
+.sidebar{
+	width: 50%;
+	max-width: 150px;
+	height: 100%;
+	position: fixed;
+	left: -80%;
+	top: 0;
+	background-color: $brand-primary; 
+	transition: left .2s;
+	z-index: 1001;
+	.sidebar-header{
+		width: 100%;
+		height: $height-header-itens;
+		background-color: #282828;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav{
+		flex-direction: column;
+		.nav-item{
+			padding: 1.8em .1em;
+			border-bottom: 1px solid #222;
+			&.success{
+				border-left: 5px solid $brand-success;
+			}
+			&.info{
+				border-left: 5px solid $brand-info;
+			}
+			&.warning{
+				border-left: 5px solid $brand-warning;
+			}
+			&.danger{
+				border-left: 5px solid $brand-danger;
+			}
+		}
+		.avatar-custom{
+			width: 50px;
+			background-color: red;
+			
+		}
+		.nav-link{
+			font-size: .9rem;
+			color: #999;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-weight: bold;
+
+			.align-badge{
+				position: relative;
+			    top: 14px;
+			    left: -13px;
+			    			}
+			fa{
+				color: #999;
+			}
+			&:hover{
+				color: #fff;
+				.fa{
+					color: #fff;
+				}
+			}
+		}
+		.fa{
+			font-size: 1.5em;
+		}
+	}
+	@include media-breakpoint-up('lg'){
+		left:0;
+		.nav .nav-link{
+			font-size: 1.1em;
+		}
+		.nav .fa{
+			font-size: 1.7em;
+		}
+	}
+}
+
+.open-sidebar{
+	&:after{
+		content:"";
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.4);
+		z-index: 1000;
+		
+	}
+	.sidebar{
+		left: 0;
+	}
+}

@@ -1,0 +1,55 @@
+.card{
+	.card-header{
+		border: 0;
+		} header{
+		display: flex;
+		align-items: center;;
+		justify-content: space-between;
+			.title-card-header h2{
+				text-transform: uppercase;
+				font-size: 0.9em;
+				font-weight: normal;
+				padding-top: 10px;
+				color:#999;
+			}
+			.months select{
+					border: 1px solid #eee;
+					padding: 5px;
+					color:#999;
+			}
+			.disabled{
+					background-color: #fff;
+					border: 1px solid #f4f4f4;
+					color: #red;
+					}
+			}
+			.messages button{
+					background-color: #fff;
+					border: 1px solid #ccc;
+			}
+
+ 
+	&{
+		.card-block{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.fa{
+				font-size: 5rem;
+			}
+		}
+		.item{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 1.5rem;
+				.warning{
+					color: $brand-warning;
+				}
+				.info{
+					color: $brand-info;
+				}
+			}
+		
+	}
+}
