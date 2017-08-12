@@ -1,5 +1,5 @@
 @import "../components/bootstrap/scss/bootstrap";
-@import "../components/bootstrap/scss/mixins/breakpoints";
+@import "../components/bootstrap/scss/normalize";
 @import "../components/components-font-awesome/scss/font-awesome";
 
 .row{
@@ -15,6 +15,7 @@
 		padding-left: 0;
 	}
 }
+$back-menu: #353535;
 
 /*Sidebar*/
 @import "sidebar";
@@ -51,17 +52,49 @@
 		}
 	}
 
-@include media-breakpoint-up('md') {
+
+@mixin make-col-project($size, $columns: $grid-columns) {
+   flex: 0 0 percentage($size / $columns);
+   width: percentage($size / $columns);
+ }
+
+
+/*iphone*/
+@include media-breakpoint-down('xs') {
 	.container{
-		width: 50%;
+		width: 100%;
+		.card{
+			height: 350px;
+		}.coluna-menor, .coluna-maior{
+			@include make-col-project(12);
+				
+				.timeline-panel{
+					padding: 0;
+				}
+				ul.timeline{
+
+					li{
+						margin-bottom: 0;
+					}
+					.timeline-title{
+						font-size: 1rem;
+					}
+				padding-top: 0;
+				.timeline-body p{
+					font-size: .6em;
+				}
+			}
+		}
 	}
 }
+
+/*ipad*/
 @include media-breakpoint-up('sm') {
 
 	.container{
 		width: 100%;
 		.card{
-			height: 400px;
+			height: 430px;
 		}
 		.timeline{
 			padding-top: 0;
@@ -71,18 +104,36 @@
 		}
 		
 	}
+}
+
+
+	.coluna-menor, .coluna-maior{
+			@mixin make-col-project($col){
+			@include make-col-project($col);
+			@include make-gutters($grid-gutter-widths);
+		}
+	}
 	.coluna-menor{
 		@include make-col-project(6);
+		padding: 10px;
 	}
 	.coluna-maior{
 		@include make-col-project(6);
+		padding: 10px;
 	}
-}
+
 
 @include media-breakpoint-up('lg') {
+	.coluna-menor{
+		@include make-col-project(6);
+		padding: 10px;
+	}
+	.coluna-maior{
+		@include make-col-project(6);
+		padding: 10px;
+	}
 	.container{
 		width: 85%;
 		margin-left: 180px;
 	}
 }
-

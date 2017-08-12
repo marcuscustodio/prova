@@ -23,7 +23,7 @@ gulp.task("move-fonts", function() {
 
 });
 
-/*Task move fonts to font awesome*/
+/*Task move img*/
 gulp.task("move-img", function() {
  return gulp.src('./src/img/**')
     .pipe(gulp.dest("./dist/img"))
