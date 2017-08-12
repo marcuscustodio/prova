@@ -23,6 +23,13 @@ gulp.task("move-fonts", function() {
 
 });
 
+/*Task move fonts to font awesome*/
+gulp.task("move-img", function() {
+ return gulp.src('./src/img/**')
+    .pipe(gulp.dest("./dist/img"))
+
+});
+
 /* Task compile scss to css */
 gulp.task("sass", ['cache:css'], function() {
 	return gulp.src("./src/scss/style.scss")
@@ -75,4 +82,4 @@ gulp.task("server", function() {
 	gulp.watch("./src/index.html", ['html']);
 });
 
-gulp.task("default", ["sass", "html", "js", "move-fonts", "concat-js", "server"]);
+gulp.task("default", ["sass", "html", "js","move-img", "move-fonts", "concat-js", "server"]);
