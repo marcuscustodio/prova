@@ -2,138 +2,63 @@
 @import "../components/bootstrap/scss/normalize";
 @import "../components/components-font-awesome/scss/font-awesome";
 
+body{
+	background-color: #ccc;
+	width:100%;
+}
+header{
+	border:1px solid;
+}
 .row{
-	@include make-row;
+	border:1px solid red;
 }
-.row {
-	margin-right: 0;
-	margin-left: 0;
-
-	>.col,
-	[class*="col-"]{
-		padding-right: 0;
-		padding-left: 0;
+section .slogan{
+	height: 300px;
+	border: 1px solid;
+	padding-top: 50px;
+	@include make-col(12);
+	h2{
+		font-size: 30px;
+		color: #fff;
+		padding-left: 60px;
+		margin-top:30px;
+	}:nth-child(2){
+		margin-left: 60px;
 	}
-}
-$back-menu: #353535;
-
-/*Sidebar*/
-@import "sidebar";
-
-/*Header*/
-@import "header";
-
-/*card custom*/
-@import "card-custom";
-
-/*timeline*/
-@import "timeline";
-
-/*badge custom*/
-//@import "badge-custom";
-
-.container{
-	width: 95%;
-	padding-left: 15px;
-	.card{
-		height: 100%;
-	}
-}
-.header .h-nav{
-		.nav{
-			margin-top:25px;
-		}
-		ul{
-			width: 250px;
-			float: right;
-		}
-		li{
-			font-size: 0.6em;
-		}
-	}
-
-
-@mixin make-col-project($size, $columns: $grid-columns) {
-   flex: 0 0 percentage($size / $columns);
-   width: percentage($size / $columns);
- }
-
-
-/*iphone*/
-@include media-breakpoint-down('xs') {
-	.container{
-		width: 100%;
-		.card{
-			height: 350px;
-		}.coluna-menor, .coluna-maior{
-			@include make-col-project(12);
-				
-				.timeline-panel{
-					padding: 0;
-				}
-				ul.timeline{
-
-					li{
-						margin-bottom: 0;
-					}
-					.timeline-title{
-						font-size: 1rem;
-					}
-				padding-top: 0;
-				.timeline-body p{
-					font-size: .6em;
-				}
-			}
-		}
+	p{
+		font-size:20px;
+		color: #006699;
+		text-align: center;
 	}
 }
 
-/*ipad*/
-@include media-breakpoint-up('sm') {
-
-	.container{
-		width: 100%;
-		.card{
-			height: 430px;
-		}
-		.timeline{
-			padding-top: 0;
-			.timeline-body{
-				font-size: .6em;
-			}
-		}
-		
+.call{
+	h2.bigger:nth-child(1){
+		color: red;
+		font-size:28px;
+		letter-spacing: 0.2em;
+		font-weight:bold;
+	}
+	h2{
+		color: #fff;
+		text-transform: uppercase;
+		font-size:20px;
 	}
 }
 
+.price{
+	border: 1px solid;
+	p{
+		text-align: right;
+	}
+}
 
-	.coluna-menor, .coluna-maior{
-			@mixin make-col-project($col){
-			@include make-col-project($col);
-			@include make-gutters($grid-gutter-widths);
-		}
-	}
-	.coluna-menor{
-		@include make-col-project(6);
-		padding: 10px;
-	}
-	.coluna-maior{
-		@include make-col-project(6);
-		padding: 10px;
-	}
-
-
-@include media-breakpoint-up('lg') {
-	.coluna-menor{
-		@include make-col-project(6);
-		padding: 10px;
-	}
-	.coluna-maior{
-		@include make-col-project(6);
-		padding: 10px;
-	}
-	.container{
-		width: 85%;
-		margin-left: 180px;
+.footer-slogan{
+	padding:30px;
+	h2{
+		color: #fff;
+	}:nth-child(2){
+		color: orange;
+		margin-left: 100px;
 	}
 }
